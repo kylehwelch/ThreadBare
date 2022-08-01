@@ -45,8 +45,10 @@ public class ThreadTwoHashMapBroken extends Thread {
 
     }
 
-    private void runMapOfSize(int size) {
+    private synchronized void runMapOfSize(int size) {
         System.out.println("Constructing HashMap of Size "+size);
+
+
         Integer threadCount = size;
 
         for (int i = 0; i < threadCount; i++) {
